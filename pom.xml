@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.com.hinsteny</groupId>
+  <artifactId>sampleJava</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <modules>
+    <module>sampleJava8</module>
+    <module>sampleJava9</module>
+    <module>sampleJava11</module>
+  </modules>
+
+  <name>sampleJava</name>
+
+  <url>https://github.com/Hinsteny/sampleJava</url>
+  <packaging>pom</packaging>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.build.targetJdk>1.8</project.build.targetJdk>
+    <jm.build.jvmsize>1024m</jm.build.jvmsize>
+    <jm.maven.version>3.0.5</jm.maven.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+    <!-- dependency plugin version -->
+    <buildnumber-maven-plugin.version>1.4</buildnumber-maven-plugin.version>
+    <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
+    <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
+    <maven-dependency-plugin.version>3.0.2</maven-dependency-plugin.version>
+    <maven-clean-plugin.version>3.0.0</maven-clean-plugin.version>
+    <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
+    <maven-war-plugin.version>3.1.0</maven-war-plugin.version>
+
+    <junit.version>4.12</junit.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${maven-compiler-plugin.version}</version>
+          <configuration>
+            <encoding>${project.build.sourceEncoding}</encoding>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+</project>

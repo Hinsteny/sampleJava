@@ -85,7 +85,7 @@ public class PracticeRepeatAnnotation {
 	
 	@Test
 	public void testClassAnnotation() throws ClassNotFoundException {
-		Class clazz = Class.forName("com.britesnow.j8.test.yao.RepeatAnnotationTest");
+		Class clazz = Class.forName("com.hinsteny.PracticeRepeatAnnotation");
 		Annotation[] annotations = clazz.getAnnotations();
 		for(Annotation annotation : annotations){
 			if(annotation.annotationType() == Programmers.class){
